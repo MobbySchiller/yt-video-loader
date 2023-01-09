@@ -9,8 +9,7 @@ tag.src = "https://www.youtube.com/iframe_api"
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
 let player
-let checkInterval
-let isCounterDisplayed = false
+let checkInterval = setInterval(checkTime, 10)
 
 button.addEventListener('click', (event) => {
     event.preventDefault()
@@ -28,7 +27,6 @@ function youtube_parser(url) {
 
 function playVideo(videoCode) {
     if (!videoCode) return alert('Błędny kod/link')
-    console.log(videoCode)
     showVideoPlayer()
     player.loadVideoById(videoCode)
 }
@@ -47,8 +45,6 @@ function showVideoPlayer() {
 function resetInput() {
     input.value = ''
 }
-
-checkInterval = setInterval(checkTime, 10)
 
 function checkTime() {
     const duration = player.getDuration()

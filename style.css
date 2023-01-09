@@ -1,5 +1,35 @@
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 6px;
+    border: 2px solid gray;
+    border-right: 0;
+    font-size: 20px;
+}
+
+button {
+    padding: 0 12px;
+    border: 2px solid gray;
+    border-left: 0;
+    background-color: #008000;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006000;
+}
+
 #frame {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 640px;
     visibility: hidden;
 }
@@ -13,4 +43,5 @@
     color: white;
     font-size: 72px;
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
